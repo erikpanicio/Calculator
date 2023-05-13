@@ -27,20 +27,21 @@ main {
 }
 
 .results {
-    height: 150px;
+    height: 120px;
     width: 100%;
+    font-size: 35px;
+    color: white;
+    background-color: transparent;
     border-bottom: 5px solid rgb(77, 77, 77);
+    display: flex;
+    align-items: center;
+
+    overflow-x: scroll;
 }
 
 .keys {
     display: grid;
-    grid-template-areas: 
-        "keyAC keyAC keyDel keyDivision"
-        "key7 key8 key9 keyMult"
-        "key4 key5 key6 keySub"
-        "key1 key2 key3 keyAdd"
-        "key0 keyPoint keyEquals keyEquals"
-    ;
+    grid-template-columns: repeat(4, 100px);
     gap: 5px;
     margin-top: 10px;
 }
@@ -50,75 +51,26 @@ button {
     font-size: 20px;
     background-color: #0B1A21;
     color: white;
-    
     /* width: 91px;
     height: 76px; */
+}
+
+button img {
+    height: 25px;
 }
 
 button:hover {
     opacity: 80%;
 }
 
-.keyAC {
-    grid-area: keyAC;
-    background-color: #7065C3;
+.delAll {
+    grid-column: 1 / 3;
 }
-.keyDel {
-    grid-area: keyDel;
+
+.equal {
+    grid-column: 3 / 5;
 }
-.keyDel img {
-    height: 25px;
-}
-.keyDivision {
-    grid-area: keyDivision;
-    background-color: #7065C3;
-}
-.key7 {
-    grid-area: key7;
-}
-.key8 {
-    grid-area: key8;
-}
-.key9 {
-    grid-area: key9;
-}
-.keyMult{
-    grid-area: keyMult;
-    background-color: #7065C3;
-}
-.key4 {
-    grid-area: key4;
-}
-.key5 {
-    grid-area: key5;
-}
-.key6 {
-    grid-area: key6;
-}
-.keySub {
-    grid-area: keySub;
-    background-color: #7065C3;
-}
-.key1 {
-    grid-area: key1;
-}
-.key2 {
-    grid-area: key2;
-}
-.key3 {
-    grid-area: key3;
-}
-.keyAdd {
-    grid-area: keyAdd;
-    background-color: #7065C3;
-}
-.key0 {
-    grid-area: key0;
-}
-.keyPoint {
-    grid-area: keyPoint;
-}
-.keyEquals {
-    grid-area: keyEquals;
+
+.purple {
     background-color: #7065C3;
 }
